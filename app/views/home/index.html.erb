@@ -10,16 +10,17 @@
 
   <% end %>
 
-
 </ul>
 
-
+  <%= form_tag home_index_path do%>
+    <%= label_tag :zip %>
+    <%= text_field_tag :zip %>
+    <%= submit_tag %>
+  <% end %>
 
 <!-- WEATHER humidity runs get humidity -->
+<% if @weather %>
   <h3>Humidity<%= @zip %>: <%= @weather["main"]["humidity"] %></h3>
   <h3>Temperature<%= @zip %>: <%= @weather["main"]["temp"] %></h3>
-    <h3>Temperature<%= @zip %>: <%= @weather%></h3>
-
-
-
-<!-- <%= user2 = User.find_by(:username => "Kyle"); %> -->
+  <h3>Temperature<%= @zip %>: <%= @weather%></h3>
+<% end %>

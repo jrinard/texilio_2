@@ -8,9 +8,7 @@ def index
     @user.liked_by current_user
   end
 
-#WEATHER - this makes the weather object and runs get humidity
-  weather_object = Weather.new("97223")
-  @weather = weather_object.get_humidity()
+
 end
 
 def new
@@ -18,7 +16,12 @@ def new
 end
 
 def create
-
+  @users = User.all
+  @user2 = User.find_by(params[:id]);
+  #WEATHER - this makes the weather object and runs get humidity
+    weather_object = Weather.new(params['zip'])
+    @weather = weather_object.get_humidity()
+    render :index
 end
 
 def show
