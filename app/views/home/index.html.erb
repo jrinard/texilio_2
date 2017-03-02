@@ -16,7 +16,9 @@
 
 
 <!-- WEATHER humidity runs get humidity -->
-  <h1> The current humidity for <%= @zip %>: <%= @humidity %></h1>
+  <h3>Humidity<%= @zip %>: <%= @weather["main"]["humidity"] %></h3>
+  <h3>Temperature<%= @zip %>: <%= @weather["main"]["temp"] %></h3>
+    <h3>Temperature<%= @zip %>: <%= @weather%></h3>
 
 
 

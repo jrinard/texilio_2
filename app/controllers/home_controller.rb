@@ -8,9 +8,9 @@ def index
     @user.liked_by current_user
   end
 
-#tWEATHER    this makes the weather object and runs get humidity
+#WEATHER - this makes the weather object and runs get humidity
   weather_object = Weather.new("97223")
-  @humidity = weather_object.get_humidity()
+  @weather = weather_object.get_humidity()
 end
 
 def new
